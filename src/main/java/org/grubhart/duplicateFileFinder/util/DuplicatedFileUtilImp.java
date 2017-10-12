@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Set;
 
-public class DuplicatedFileUtilImp implements DuplicatedFileUtil {
+public class DuplicatedFileUtilImp{
 
     private Hashtable<String,Set<String>> duplicatedFiles;
 
@@ -13,22 +13,20 @@ public class DuplicatedFileUtilImp implements DuplicatedFileUtil {
         duplicatedFiles= new Hashtable<>();
     }
 
-    @Override
-    public void add(String path, String fileName) {
+    public void add(String absolutePath, String fileName) {
 
         int numberDuplicatedFiles = size(fileName);
 
         if(0 == numberDuplicatedFiles ){
-            Set<String> paths = new HashSet<>();
-            paths.add(path);
-            duplicatedFiles.put(fileName,paths);
+            Set<String> absolutePaths = new HashSet<>();
+            absolutePaths.add(absolutePath);
+            duplicatedFiles.put(fileName,absolutePaths);
         }else {
             Set<String> paths= duplicatedFiles.get(fileName);
-            paths.add(path);
+            paths.add(absolutePath);
         }
     }
 
-    @Override
     public int size(String fileName) {
 
         Set<String> paths= duplicatedFiles.get(fileName);

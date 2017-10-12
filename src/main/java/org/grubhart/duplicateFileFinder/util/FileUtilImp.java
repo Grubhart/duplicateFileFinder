@@ -4,11 +4,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileUtilImp implements FileUtil {
+public class FileUtilImp {
 
 
 
-    @Override
     public List<String> getNames(String path) {
 
         File folder = new File(path);

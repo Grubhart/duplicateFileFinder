@@ -10,11 +10,11 @@ public class TestDuplicatedFileUtilImp {
     @Test
     public void testAddUniqueFile(){
 
-        DuplicatedFileUtil duplicatedFileUtil = new DuplicatedFileUtilImp();
+        DuplicatedFileUtilImp duplicatedFileUtil = new DuplicatedFileUtilImp();
 
-        duplicatedFileUtil.add("path","fileName");
+        duplicatedFileUtil.add("absolutePath","/fileFolder/fileName");
 
-        assertEquals(1, duplicatedFileUtil.size("fileName"));
+        assertEquals(1, duplicatedFileUtil.size("/fileFolder/fileName"));
 
 
 
@@ -23,11 +23,11 @@ public class TestDuplicatedFileUtilImp {
     @Test
     public void testAddduplicatedFile(){
 
-        DuplicatedFileUtil duplicatedFileUtil = new DuplicatedFileUtilImp();
+        DuplicatedFileUtilImp duplicatedFileUtil = new DuplicatedFileUtilImp();
 
-        duplicatedFileUtil.add("path","fileName");
-        duplicatedFileUtil.add("path2","fileName");
-        assertEquals(2, duplicatedFileUtil.size("fileName"));
+        duplicatedFileUtil.add("absolutePath","/fileFolder/fileName");
+        duplicatedFileUtil.add("absolutePath2", "/fileFolder/fileName");
+        assertEquals(2, duplicatedFileUtil.size( "/fileFolder/fileName"));
 
     }
 

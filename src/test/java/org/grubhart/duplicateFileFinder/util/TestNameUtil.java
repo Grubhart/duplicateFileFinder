@@ -9,7 +9,7 @@ public class TestNameUtil {
     @Test
     public void testNoDuplicateName(){
 
-        NameUtil namesService = new NameUtilImp();
+        NameUtilImp namesService = new NameUtilImp();
 
         assertFalse(namesService.exist("file.txt"));
     }
@@ -17,7 +17,7 @@ public class TestNameUtil {
     @Test
     public void testDuplicatedName(){
 
-        NameUtil namesService = new NameUtilImp();
+        NameUtilImp namesService = new NameUtilImp();
         assertFalse(namesService.exist("file.txt"));
         namesService.add("file.txt");
 
