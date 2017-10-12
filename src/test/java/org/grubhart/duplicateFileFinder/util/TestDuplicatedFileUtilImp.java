@@ -30,14 +30,6 @@ public class TestDuplicatedFileUtilImp {
         assertEquals(2, duplicatedFileUtil.size("fileName"));
 
     }
-
-    @Test
-    public void testPathsArchivoNoEnDisco(){
-
-        DuplicatedFileUtil duplicatedFileUtil = new DuplicatedFileUtilImp();
-
-        assertEquals(0, duplicatedFileUtil.size("fileName"));
-
-    }
+    
 
 }
