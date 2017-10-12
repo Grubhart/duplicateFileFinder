@@ -21,4 +21,9 @@ public class FileUtilImp {
 
         return namesInFolder;
     }
+
+    public List<String> getPaths(String duplicatedName) {
+
+        return new ArrayList<String>();
+    }
 }
