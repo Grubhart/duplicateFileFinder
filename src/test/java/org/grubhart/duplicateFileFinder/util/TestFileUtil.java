@@ -5,14 +5,16 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.io.File;
 import static junit.framework.TestCase.*;
 
 public class TestFileUtil {
 
     @Test
     public void testScanFolder(){
-        String path = "C:\\Users\\Edson\\IdeaProjects\\duplicateFileFinderBE\\src\\test\\resources\\mockFolder\\folderA";
+        String path = new File("").getAbsolutePath()+"\\src\\test\\resources\\mockFolder\\folderA";
+
+        path=path.replace("\\",File.separator);
         FileUtilImp fileUtil = new FileUtilImp();
 
         List<String> expectedNames = new ArrayList<>();

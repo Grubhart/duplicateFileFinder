@@ -30,6 +30,6 @@ public class TestDuplicatedFileUtilImp {
         assertEquals(2, duplicatedFileUtil.size("fileName"));
 
     }
-    
+
 
 }
