@@ -4,12 +4,15 @@ import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Set;
 
-public class DuplicatedFileUtilImp{
+public class DuplicatedFileRepository {
 
     private Hashtable<String,Set<String>> duplicatedFiles;
 
+    public Hashtable<String, Set<String>> getDuplicatedFiles() {
+        return duplicatedFiles;
+    }
 
-    public DuplicatedFileUtilImp() {
+    public DuplicatedFileRepository() {
         duplicatedFiles= new Hashtable<>();
     }
 
