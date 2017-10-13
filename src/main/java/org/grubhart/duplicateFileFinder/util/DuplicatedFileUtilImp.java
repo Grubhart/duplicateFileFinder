@@ -13,7 +13,7 @@ public class DuplicatedFileUtilImp{
         duplicatedFiles= new Hashtable<>();
     }
 
-    public void add(String absolutePath, String fileName) {
+    public void add(String fileName,String absolutePath) {
 
         int numberDuplicatedFiles = size(fileName);
 
@@ -26,6 +26,8 @@ public class DuplicatedFileUtilImp{
             paths.add(absolutePath);
         }
     }
+    
+    
 
     public int size(String fileName) {
 

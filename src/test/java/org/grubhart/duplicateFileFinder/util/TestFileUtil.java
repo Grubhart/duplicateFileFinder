@@ -41,7 +41,7 @@ public class TestFileUtil {
         expectedPaths.add(path.concat(File.separator+"folderA"+File.separator+"duplicatedName"));
         expectedPaths.add(path.concat(File.separator+"folderB"+File.separator+"duplicatedName"));
 
-        List<String> resultPaths = fileUtil.getPaths("duplicatedName");
+        List<String> resultPaths = fileUtil.getPaths(path,"duplicatedName");
 
         assertTrue(resultPaths.contains(expectedPaths.get(0)));
         assertTrue(resultPaths.contains(expectedPaths.get(1)));

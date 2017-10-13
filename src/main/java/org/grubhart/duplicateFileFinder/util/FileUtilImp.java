@@ -6,7 +6,7 @@ import java.util.List;
 
 public class FileUtilImp {
 
-
+    private DuplicatedFileUtilImp duplicatedFileUtilImp = new DuplicatedFileUtilImp();
 
     public List<String> getNames(String path) {
 
@@ -22,8 +22,17 @@ public class FileUtilImp {
         return namesInFolder;
     }
 
-    public List<String> getPaths(String duplicatedName) {
+    public List<String> getPaths(String path,String duplicatedName) {
 
-        return new ArrayList<String>();
+        File folder = new File(path);
+        File[] listOfFiles = folder.listFiles();
+        List<String> namesInFolder= new ArrayList<>();
+        for(File file:listOfFiles){
+            if (file.isFile() && file.getName().equals(duplicatedName)) {
+                duplicatedFileUtilImp.add(duplicatedName,file.getAbsolutePath());
+            }
+        }
+        
+        return duplicatedFileUtilImp.;
     }
 }
